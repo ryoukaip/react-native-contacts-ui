@@ -30,7 +30,7 @@ const User = () => {
       {loading && <ActivityIndicator size="large" />}
       {error && <Text>Error loading user data...</Text>}
       {!loading && !error && (
-        <ContactThumbnail avatar={avatar} name={name} phone={phone} />
+        <ContactThumbnail avatar={'https://litter.catbox.moe/xbldq3.png'} name={'Luong Nguyen Khoi'} phone={'0123-456-789'} />
       )}
     </View>
   );

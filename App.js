@@ -8,7 +8,7 @@ const App = () => {
   return (
     <Provider store={Store}>
       {/* StatusBar is applied globally */}
-      <StatusBar barStyle="dark-content" backgroundColor="black" />
+      <StatusBar barStyle="dark-content" backgroundColor="white" />
       <DrawerNavigator />
     </Provider>
   );

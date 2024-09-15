@@ -9,7 +9,11 @@ import {
 import { fetchContacts } from "../utils/api";
 import ContactThumbnail from "../components/ContactThumbnail";
 import { useDispatch, useSelector } from 'react-redux';
-import Call from "./Call";
+import { Call } from "./Call"; // Ensure Call is exported as a named export
+
+// If Call is a default export, use the following line instead:
+// import Call from "./Call";
+
 const keyExtractor = ({ phone }) => phone;
 const Favorites = ({ navigation }) => {
   //state
@@ -29,8 +33,9 @@ const Favorites = ({ navigation }) => {
         // setError(true);
       });
   });
-  const renderFavoriteThumbnail = ({ item }) => {
-    const { avatar, name, phone } = item;
+  
+    const renderFavoriteThumbnail = ({ item }) => {
+      const { avatar, name, phone } = item;
     return (
       <View>
         <ContactThumbnail
